@@ -6,7 +6,7 @@ on:
       - main  # ou 'master', ou toute autre branche à surveiller
   pull_request:
     branches:
-      - main  # ou 'master'
+      - main 
 
 jobs:
   test-and-quality:
