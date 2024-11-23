@@ -1,4 +1,5 @@
 # Requirements (Jeu)
+indexer
 SpellChecker
 
 # Requirements (pour les tests et le développement)
