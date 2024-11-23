@@ -19,7 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.11'  # Choisir la version Python que tu utilises
+        python-version: '3.8'  # Choisir la version Python que tu utilises
 
     - name: Install dependencies
       run: |
