@@ -1,0 +1,35 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main  # ou 'master', ou toute autre branche à surveiller
+  pull_request:
+    branches:
+      - main  # ou 'master'
+
+jobs:
+  test-and-quality:
+    runs-on: windows-latest  # Choisir le système d'exploitation
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.11'  # Choisir la version Python que tu utilises
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests with pytest
+      run: |
+        pytest tests/
+
+    - name: Run flake8 for code quality
+      run: |
+        flake8 src/  # Vérifier la qualité du code dans le dossier 'src'
