@@ -1,2 +1,9 @@
+# Python version minimum
+python>=3.6
+
+# Requirements (Jeu)
+SpellChecker
+
+# Requirements (pour les tests et le développement)
 pytest
 flake8

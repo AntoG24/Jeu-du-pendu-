@@ -5,9 +5,7 @@ import unicodedata
 
 
 class Joueur:
-
     def __init__(self, nom):
-
         """
         Initialise un joueur avec son nom.
         :param nom: Le nom du joueur
@@ -15,7 +13,6 @@ class Joueur:
         self.nom = nom
 
     def __str__(self):
-
         """
         Retourne une représentation sous forme de chaîne de caractères.
         :return: Le nom du joueur
@@ -25,9 +22,8 @@ class Joueur:
 
 
 def initialiser_liste():
-
     # Créer une instance du correcteur orthographique pour le français
-    spell = SpellChecker(language='fr')
+    spell = SpellChecker(language="fr")
 
     # Récupérer la liste des mots
     mots = list(spell.word_frequency.keys())
@@ -50,23 +46,23 @@ def choisir_mot_aleatoire(liste_mots):
 def afficher_pendu(i):
     # Fonction qui affiche l'état du pendu en fonction du nombre d'erreurs (i)
     etats_pendu = [
-        '''
-        ''',
-        '''
+        """
+        """,
+        """
                |
                |
                |
         =========
-        ''',
-        '''
+        """,
+        """
                |
                |
                |
                |
                |
         =========
-        ''',
-        '''
+        """,
+        """
            -----
                |
                |
@@ -74,35 +70,35 @@ def afficher_pendu(i):
                |
                |
         =========
-        ''',
-        '''
-           -----
-          |    |
-               |
-               |
-               |
-               |
-        =========
-        ''',
-        '''
+        """,
+        """
            -----
           |    |
-          O    |
+               |
                |
                |
                |
         =========
-        ''',
-        '''
+        """,
+        """
            -----
           |    |
           O    |
+               |
+               |
+               |
+        =========
+        """,
+        """
+           -----
+          |    |
+          O    |
           |    |
                |
                |
         =========
-        ''',
-        '''
+        """,
+        """
            -----
           |    |
           O    |
@@ -110,8 +106,8 @@ def afficher_pendu(i):
                |
                |
         =========
-        ''',
-        '''
+        """,
+        """
            -----
           |    |
           O    |
@@ -119,8 +115,8 @@ def afficher_pendu(i):
                |
                |
         =========
-        ''',
-        '''
+        """,
+        """
            -----
           |    |
           O    |
@@ -128,8 +124,8 @@ def afficher_pendu(i):
          /     |
                |
         =========
-        ''',
-        '''
+        """,
+        """
            -----
           |    |
           O    |
@@ -137,33 +133,33 @@ def afficher_pendu(i):
          /\\    |
                |
         =========
-        '''
+        """,
     ]
 
     print(etats_pendu[i])
 
 
 def Jouer(mots):
+    # Normalise les mots sans accent
+    mots = ''.join(
+        c for c in unicodedata.normalize("NFD", mots)
+        if unicodedata.category(c) != "Mn"
+    )
 
-    mots = ''.join(c for c in unicodedata.normalize(
-        'NFD', mots) if unicodedata.category(c) != 'Mn')
-
-    mot_cache = ['_'] * len(mots)
+    mot_cache = ["_"] * len(mots)
     # La première et dernière lettre sont visibles
     mot_cache[0] = mots[0]
     mot_cache[-1] = mots[-1]
 
     lettres_du_mot = list(mots)
 
-    print("\nVoici le mot à deviner:", ' '.join(mot_cache))
-    # print(lettres_du_mot)
+    print("\nVoici le mot à deviner:", " ".join(mot_cache))
 
     tentatives = 10  # Nombre de tentatives
     i = 0  # Compteur de tentatives incorrectes
 
     while i < tentatives:
-
-        if '_' not in mot_cache:
+        if "_" not in mot_cache:
             break
         else:
             proposition = input("Proposez une lettre : ").lower()
@@ -172,7 +168,6 @@ def Jouer(mots):
         if len(proposition) != 1 or not proposition.isalpha():
             print("Veuillez entrer une seule lettre.")
         else:
-
             # Vérifier si la lettre est dans le mot
             if proposition in lettres_du_mot:
                 print(f"La lettre '{proposition}' est dans le mot !")
@@ -185,14 +180,14 @@ def Jouer(mots):
                 print(f"La lettre '{proposition}' n'est pas dans le mot.")
                 i += 1  # Incrémenter le nombre de tentatives incorrectes
 
-            os.system('clear')
+            os.system("clear")
             # Afficher l'état actuel du mot caché
             afficher_pendu(i)
-            print("\nMot à deviner : ", ' '.join(mot_cache))
+            print("\nMot à deviner : ", " ".join(mot_cache))
             print(f"Il vous reste {tentatives-i} tentatives.")
 
     # Vérifier la fin du jeu
-    if '_' not in mot_cache:
+    if "_" not in mot_cache:
         print("Félicitations ! Vous avez deviné le mot.")
         resultat = 1
 
@@ -231,10 +226,9 @@ if __name__ == "__main__":
     liste_mots = initialiser_liste()
 
     while choix == 1:
-
         mot_inconnu = choisir_mot_aleatoire(liste_mots)
         resultat = Jouer(mot_inconnu)
         Afficher_classement(liste_joueur, resultat)
         print("\nVoulez-vous continuer à jouer? (oui = 1 / non = 0)")
         choix = int(input("Réponse:"))
-        os.system('clear')
+        os.system("clear")
