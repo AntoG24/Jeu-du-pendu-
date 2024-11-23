@@ -10,9 +10,9 @@ def test_check_letter_in_word():
     letter = "p"
     result = check_letter_in_word(word, letter)
 
-    assert result == True  # On attend True car "p" est dans "pendu"
+    assert result  # On attend True car "p" est dans "pendu"
 
     letter = "z"
     result = check_letter_in_word(word, letter)
 
-    assert result == False  # On attend False car "z" n'est pas dans "pendu"
+    assert not result  # On attend False car "z" n'est pas dans "pendu"
