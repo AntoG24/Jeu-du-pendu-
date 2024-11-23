@@ -1,0 +1,10 @@
+[project]
+name = "Jeu-du-pendu"
+version = "0.1.0"
+description = "Un jeu du pendu simple en Python"
+authors = ["GARDAIS <Antonin.GARDAIS@estaca.eu> et Checler <alexis.checler--monasson@estaca.eu> "]
+license = "MIT"
+
+[tool]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
