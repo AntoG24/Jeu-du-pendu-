@@ -4,7 +4,8 @@ import unicodedata
 import nltk
 from nltk.corpus import words
 
-nltk.download('words')
+nltk.download("words")
+
 
 class Joueur:
     def __init__(self, nom):
@@ -25,9 +26,8 @@ class Joueur:
 
 def initialiser_liste():
     # Créer une instance du correcteur orthographique pour le français
-   
+
     mots = words.words()
-    
 
     return mots
 
@@ -142,7 +142,7 @@ def afficher_pendu(i):
 
 def Jouer(mots):
     # Normalise les mots sans accent
-    mots = ''.join(
+    mots = "".join(
         c for c in unicodedata.normalize("NFD", mots)
         if unicodedata.category(c) != "Mn"
     )
@@ -153,7 +153,6 @@ def Jouer(mots):
     mot_cache[-1] = mots[-1]
 
     lettres_du_mot = list(mots)
-  
 
     print("\nVoici le mot à deviner:", " ".join(mot_cache))
 
