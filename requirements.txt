@@ -1,5 +1,5 @@
 # Requirements (Jeu)
-SpellChecker
+nltk
 
 # Requirements (pour les tests et le développement)
 pytest
