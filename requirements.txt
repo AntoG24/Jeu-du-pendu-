@@ -1,6 +1,3 @@
-# Python version minimum
-python>=3.6
-
 # Requirements (Jeu)
 SpellChecker
 
