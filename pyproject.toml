@@ -1,12 +1,53 @@
 [project]
 name = "Jeu-du-pendu"
-version = "0.1.0"
+version = "1.0.0"
 description = "Un jeu du pendu simple en Python"
-authors = ["GARDAIS <Antonin.GARDAIS@estaca.eu>, Checler <alexis.checler--monasson@estaca.eu> et Martinelli <lucas.martinelli@estaca.eu> "]
+authors = [
+    "Antonin Gardais <Antonin.GARDAIS@estaca.eu>",
+    "Alexis Checler <alexis.checler--monasson@estaca.eu>",
+    "Lucas Martinelli <lucas.martinelli@estaca.eu>"
+]
 license = "MIT"
+keywords = ["pendu", "jeu", "python", "éducation", "projet scolaire"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+readme = "README.md"
+requires-python = ">=3.10"
 
+# Dépendances runtime (utilisées pendant l'exécution du projet)
+dependencies = [
+    "requests>=2.28",
+    "numpy>=1.23",
+    "pandas>=1.5"
+]
+
+[project.optional-dependencies]
+# Dépendances utilisées uniquement en développement
+dev = [
+    "black>=23.0",
+    "flake8>=6.0",
+    "pytest>=7.4",
+    "mypy>=1.0"
+]
+
+# Pour les configurations d'outils
 [tool]
+
+# Configurer pytest
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "--strict-markers --disable-warnings"
+
+# Configurer black
 [tool.black]
 line-length = 79
+target-version = ["py310"]
+
+# Configurer flake8
+[tool.flake8]
+max-line-length = 79
+
+
