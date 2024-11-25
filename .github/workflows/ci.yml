@@ -10,7 +10,7 @@ on:
 
 jobs:
   test-and-quality:
-    runs-on: windows-latest  # Choisir le système d'exploitation
+    runs-on: windows-latest 
 
     steps:
     - name: Checkout code
@@ -19,7 +19,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: '3.8'  # Choisir la version Python que tu utilises
+        python-version: '3.10' 
 
     - name: Install dependencies
       run: |
