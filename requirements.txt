@@ -4,3 +4,4 @@ nltk
 # Requirements (pour les tests et le développement)
 pytest
 flake8
+black
