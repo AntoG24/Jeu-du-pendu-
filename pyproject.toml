@@ -2,9 +2,11 @@
 name = "Jeu-du-pendu"
 version = "0.1.0"
 description = "Un jeu du pendu simple en Python"
-authors = ["GARDAIS <Antonin.GARDAIS@estaca.eu> et Checler <alexis.checler--monasson@estaca.eu> "]
+authors = ["GARDAIS <Antonin.GARDAIS@estaca.eu>, Checler <alexis.checler--monasson@estaca.eu> et Martinelli <lucas.martinelli@estaca.eu> "]
 license = "MIT"
 
 [tool]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+[tool.black]
+line-length = 79
