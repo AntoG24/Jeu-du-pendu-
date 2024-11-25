@@ -141,7 +141,7 @@ def afficher_pendu(i):
 
 
 def Jouer(mots):
-    # Normalise les mots sans accent
+    # Normalise les mots sans accents
     mots = "".join(
         c for c in unicodedata.normalize("NFD", mots)
         if unicodedata.category(c) != "Mn"
