@@ -25,6 +25,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install black  # Ajouter Black aux dépendances
+        
+    - name: Run Black for code formatting
+      run: |
+        black src/  # Reformater automatiquement le code du dossier 'src'
 
     - name: Run tests with pytest
       run: |
