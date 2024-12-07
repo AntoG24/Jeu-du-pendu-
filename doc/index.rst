@@ -1,7 +1,18 @@
-.. Jeu du pendu documentation master file, created by
-   sphinx-quickstart on Thu Nov 23 2024.
+Jeu du Pendu
+============
 
-Welcome to Jeu du pendu's documentation!
-========================================
+Bienvenue dans la documentation du Jeu du Pendu.
 
-This is the main documentation for the game.
+.. toctree::
+   :maxdepth: 2
+   :caption: Contenu :
+
+   modules
+   classes
+   fonctions
+
+Indices et Références
+======================
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
