@@ -2,6 +2,11 @@
 
 Un jeu du pendu simple et amusant développé en Python.
 
+## Documentation 
+
+- La documentation explicitant les classes et fonctions employées dans ce programme est accessible au format HTML via la commande :
+  `start _build\html\index.html`
+
 ## Fonctionnalités
 
 - Devinez un mot choisi aléatoirement en proposant des lettres.
@@ -13,7 +18,7 @@ Un jeu du pendu simple et amusant développé en Python.
 
 1. Clonez le dépôt :  
    `git clone https://github.com/<AntoG24>/jeu-du-pendu.git`
-   `git clone https://github.com/AntoG24/Jeu-du-pendu-.git`
+   OU `git clone https://github.com/AntoG24/Jeu-du-pendu-.git`
    `cd jeu-du-pendu`  
 
 3. Installez les dépendances nécessaires :  
@@ -23,7 +28,7 @@ Un jeu du pendu simple et amusant développé en Python.
 
 Pour lancer le jeu, exécutez le fichier principal :  
 `python main.py`  
-`python src/jeu_du_pendu.py`
+OU `python src/jeu_du_pendu.py`
 
 Lors de l'exécution, le programme :  
 1. Demande votre nom.  
