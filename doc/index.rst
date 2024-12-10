@@ -11,6 +11,9 @@ Bienvenue dans la documentation du Jeu du Pendu.
    classes
    fonctions
 
+.. automodule:: jeu_du_pendu
+   :members:
+
 Indices et Références
 ======================
 * :ref:`genindex`
