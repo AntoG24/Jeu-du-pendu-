@@ -22,6 +22,7 @@ Un jeu du pendu simple et amusant développé en Python.
 
 Pour lancer le jeu, exécutez le fichier principal :  
 `python main.py`  
+`python src/jeu_du_pendu.py`
 
 Lors de l'exécution, le programme :  
 1. Demande votre nom.  
