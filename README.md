@@ -12,10 +12,11 @@ Un jeu du pendu simple et amusant développé en Python.
 ## Installation
 
 1. Clonez le dépôt :  
-   `git clone https://github.com/<AntoG24>/jeu-du-pendu.git`  
+   `git clone https://github.com/<AntoG24>/jeu-du-pendu.git`
+   `git clone https://github.com/AntoG24/Jeu-du-pendu-.git`
    `cd jeu-du-pendu`  
 
-2. Installez les dépendances nécessaires :  
+3. Installez les dépendances nécessaires :  
    `pip install -r requirements.txt`
 
 ## Utilisation
